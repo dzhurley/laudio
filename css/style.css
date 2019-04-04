@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata';
+}
+
+.controls {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.controls button {
+    background-color: #272727;
+    color: #d7d7d7;
+    height: 4rem;
+    width: 4rem;
+
+    box-shadow: 0 0 0 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: none;
+}
+.loaded .controls button {
+    display: block;
+}
+
+.upload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    background-color: #272727;
+    color: #d7d7d7;
+    box-shadow: 0 0 0 1px;
+}
+.loaded .upload {
+    display: none;
+}
+.upload input {
+    height: 0.1px;
+    width: 0.1px;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+}
+.upload label {
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 4rem;
+    padding: 2rem;
+}
+
+.pause,
+.play {
+    stroke: #d7d7d7;
+    fill: #d7d7d7;
+    stroke-width: 1;
+}
+
+.pause,
+.playing > .play {
+    display: block;
+}
+.play,
+.playing > .pause {
+    display: none;
+}
+
+.controls-info {
+    margin-left: 1px;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.5;
+    box-shadow: 0 0 0 1px;
+}
